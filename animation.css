@@ -104,8 +104,8 @@ body {
     top: 5vw;
     left: 20vw;
 
-    animation: jump .5s ease-out infinite both;
-    animation-direction: alternate-reverse;
+    animation: jump .5s ease-out infinite both alternate-reverse, fwalk 5s 3s ease-in backwards;
+
 }
 
 
@@ -126,7 +126,7 @@ body {
     top: 3vw;
     left: -20vw;
 
-    animation: jump .2s ease infinite both alternate-reverse;
+    animation: jump .2s ease infinite both alternate-reverse, bwalk 5s 3s ease-out backwards;
 }
 
 @keyframes jump {
@@ -139,6 +139,23 @@ body {
 
     }
 
+
+}
+
+@keyframes bwalk {
+
+    from{ left: -70vw;}
+
+    to{ left: -20vw;}
+
+
+}
+
+@keyframes fwalk {
+
+      from{ left: 70vw;}
+
+    to{ left: 20vw;}
 
 }
 
@@ -158,8 +175,8 @@ body {
     top: 2vw;
     left: 10vw;
 
-    animation: jump .5s ease-out infinite both;
-    animation-direction: alternate-reverse;
+    animation: jump .5s ease-out infinite both alternate-reverse, fwalk 5s 3s ease-in backwards;
+
 }
 
 .gun_left{
@@ -178,7 +195,7 @@ body {
     top: 4vw;
     left: -13vw;
 
-    animation: jump .2s ease infinite both alternate-reverse;
+    animation: jump .2s ease infinite both alternate-reverse, bwalk 5s 3s ease-out backwards;
 
 
 
