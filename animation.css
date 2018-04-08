@@ -1,0 +1,243 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#scene {
+
+    width: 100vw;
+    /*= 1600px*/
+    height: 56.25vw;
+    /*= 900px*/
+    position: relative;
+
+    overflow: hidden;
+}
+
+.himmel {
+
+    background-image: url(skie.svg);
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+}
+
+.sky {
+    background-image: url(sky.svg);
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    transform: scale(.1);
+
+
+
+
+}
+
+.fsky1 {
+
+    top: -23vw;
+    animation: drift 25s linear infinite;
+
+}
+
+.fsky2 {
+
+    top: -18vw;
+
+    transform: scale(.2);
+    animation: drift 45s 5s linear infinite backwards;
+
+
+
+}
+
+.fsky3{
+        top: -25vw;
+    animation: drift 30s 10s linear infinite backwards;
+
+
+}
+
+@keyframes drift {
+    from {
+        left: -60vw;
+
+    }
+
+    to {
+        left: 60vw;
+    }
+}
+
+.bg {
+    background-image: url(baggrund.svg);
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+}
+
+
+.froprofil {
+
+    background-image: url(froprofil.svg);
+    background-size: 100% 100%;
+
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    transform: scale(.6);
+
+    top: 5vw;
+    left: 20vw;
+
+    animation: jump .5s ease-out infinite both;
+    animation-direction: alternate-reverse;
+}
+
+
+
+
+.bjornprofil {
+    background-image: url(bjornprofil.svg);
+    background-size: 100% 100%;
+
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    transform: scale(.5);
+
+    top: 3vw;
+    left: -20vw;
+
+    animation: jump .2s ease infinite both alternate-reverse;
+}
+
+@keyframes jump {
+
+    from{ top: .6vw;
+
+    }
+
+    to{ top: 1vw;
+
+    }
+
+
+}
+
+.gun_right {
+
+     background-image: url(gun.svg);
+    background-size: 100% 100%;
+
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    transform: scale(.2) rotate(10deg);
+
+    top: 2vw;
+    left: 10vw;
+
+    animation: jump .5s ease-out infinite both;
+    animation-direction: alternate-reverse;
+}
+
+.gun_left{
+
+    background-image: url(gun.svg);
+    background-size: 100% 100%;
+
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    transform: scale(.2) rotate(-5deg) scaleX(-1);
+
+    top: 4vw;
+    left: -13vw;
+
+    animation: jump .2s ease infinite both alternate-reverse;
+
+
+
+}
+
+
+
+.cactus1 {
+
+    background-image: url(cactus3.svg);
+    background-size: 100% 100%;
+
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    transform: scale(1) rotate(6deg);
+
+    top: 8vw;
+    left: -45vw;
+
+animation: wind 2s 5s ease infinite alternate-reverse;
+}
+
+.cactus2 {
+
+    background-image: url(cactus4.svg);
+    background-size: 100% 100%;
+
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    transform: scale(.4) rotate(6deg);
+
+    top: 10vw;
+    left: 41vw;
+
+    animation: wind 3s ease infinite alternate-reverse;
+
+
+}
+
+
+@keyframes wind{
+    from{
+    transform: rotate(3deg) scale(1);
+
+
+    }
+
+    to{
+        transform: rotate(1deg);
+
+
+    }
+
+}
